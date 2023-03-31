@@ -1,38 +1,512 @@
-.App {
+/* apply those styles to all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* _____________Login Page____________ */
+.backgroundImage {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+}
+
+#img {
+  position: absolute;
+  width: 98%;
+  height: 60vh;
+  top: 0;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.backgroundImage p {
+  margin: 1rem 0;
+}
+
+.loginPage {
+  width: 400px;
+  height: 70vh;
+  margin: auto;
+  padding: 7rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.loginPage Link {
+  margin: 1rem 0;
+}
+
+.loginPage h1 {
+  margin-bottom: 2rem;
+}
+
+.form input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.form input:hover,
+.form input:focus {
+  border: 2px solid #000000;
+}
+
+.label {
+  position: relative;
+}
+
+.label label {
+  position: absolute;
+  left: 10px;
+  top: -12px;
+  background-color: #fff;
+  padding: 0px 5px;
+}
+#link{
+  color: #000;
+  text-decoration: none;
+}
+#link:hover{
+  color: #fff;
+}
+.form button  {
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form button:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  font-size: 2rem;
+}
+
+.newUser p {
+  margin: 1rem 0;
+}
+
+.newUser a:hover {
+  color: #1877F2;
+}
+
+.home {
+  width: 100%;
+}
+
+.NavBar {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: #eaf4fd;
+  top: 0;
+  z-index: 5;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.NavBar {
+  font-family: 'Playfair Display', serif;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h1 {
+  font-size: 3rem;
+}
+
+.flotRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar {
+  position: relative;
+  margin: 0rem 2rem;
+}
+
+.searchBar input {
+  width: 300px;
+  outline: none;
+  text-align: center;
+  font-size: 1.2rem;
+  background: #eaf4fd;
+  border: none;
+  border-bottom: 1px solid #e3e4e7;
+
+}
+
+.searchBar input:hover {
+  border-bottom: 2px solid #1877F2;
+}
+
+.searchBar input:focus {
+  border-bottom: 2px solid #1877F2;
+}
+
+.searchBar a {
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  right: 10px;
+}
+
+.notification a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  position: relative;
+  margin: 0 2rem;
+}
+
+.profilePic img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  position: relative;
+  margin: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 9rem 6rem;
+  height: 80vh;
+}
+
+.list {
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem 2rem 0 2rem;
+  margin: 1rem;
+  background: #eaf4fd;
+  border: 1px solid #eaf4fd;
+  transition: all ease 200ms;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.list:hover {
+  transform: scale(1.1);
+}
+
+.list h2 {
+  position: relative;
+}
+
+.list h2::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #1877F2;
+
+}
+
+/*______ Card Icon Styles______ */
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.actions span {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.app a {
+  color: #000000;
+  font-size: 2rem;
+}
+
+.text-center p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.add a {
+  position: absolute;
+  font-size: 3rem;
+  color: #f0071b;
+  top: 1400px;
+  left: 1400px;
+}
+
+/* _______Add New Note Style__________ */
+.over {
+  /* top: 0; */
+  z-index: 10000;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newForm {
+  width: 500px;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.newForm a {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.addNote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.addNote input {
+  margin: 2rem 0;
+  padding: 0;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  float: left;
+}
+
+.addNote input:hover,
+.addNote input:focus {
+  border: 1px solid #fff;
+  background: #fff;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+.addNote textarea {
+  width: 400px;
+  margin-top: 3rem;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  padding: 0;
+}
+
+.addNote textarea:hover,
+.addNote textarea:focus {
+  width: 400px;
+  border: 1px solid #fff;
+  background: #fff;
+  border-bottom: 2px solid #000;
+  padding: 0;
+  outline: none;
+}
+
+.addNote {
+  margin-top: 1rem;
+}
+
+.addNote button {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  background: #1877F2;
+  color: #fff;
+  border: 1px solid #1877F2;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add span:hover {
+  opacity: 0.9;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 10;
+  color: #f0071b;
+  outline: none;
+  font-size: 2rem;
+}
+
+/* _____________Personal Details __________ */
+
+.profile {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profileImage p {
+  font-size: 3rem;
+  color: #000;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profileImage img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #414040;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.details {
+  width: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.personDetails {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.personDetails label {
+  position: absolute;
+  top: -9px;
+  left: 5px;
+  background: #fff;
+  padding: 0px 5px;
+
+}
+
+.personDetails input {
+  padding: 1rem 2rem 0.5rem 2rem;
+  width: 500px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #000000;
+  font-size: 1rem;
+}
+
+.personDetails input:hover,
+.personDetails input:focus {
+  border: 2px solid #000000;
+}
+
+.details button {
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #1877F2;
+  background-color: #1877F2;
+  color: #fff;
+}
+
+.details button:hover {
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+/* Redirect to Login Page  */
+.redirectLogin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.redirectLogin img{
+  width: 500px;
+}
+.messages{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.link{
+  color: #fff;
+  text-decoration: none;
+  background-color: #1877F2;
+  border: 1px solid #1877F2;
+  border-radius: 10px;
+  width: 100px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+.link:hover{
+  opacity: .8;
 }
